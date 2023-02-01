@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+<!--    <servlet>-->
+<!--        <servlet-name>Main</servlet-name>-->
+<!--        <servlet-class>com.aptech.myblog.MainServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>Main</servlet-name>-->
+<!--        <url-pattern>/home</url-pattern>-->
+<!--    </servlet-mapping>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>Main</servlet-name>-->
+<!--        <url-pattern>*.do</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+    <servlet>
+        <servlet-name>Main</servlet-name>
+        <servlet-class>com.aptech.myblog.MainServlet</servlet-class>
+        <init-param>
+            <param-name>productName</param-name>
+            <param-value>My Blog XML</param-value>
+        </init-param>
+    </servlet>
+    <context-param>
+        <param-name>connectString</param-name>
+        <param-value>Server=.\\SQLEXPRESS; Database=Tên_Database;TrustServerCertificate=True; trusted_connection=yes</param-value>
+    </context-param>
+
+</web-app>
